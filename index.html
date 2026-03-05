@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardián del Hogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ HERO ═══ -->
+  <header class="hero">
+    <div class="hero-bg-shapes">
+      <span class="shape s1"></span>
+      <span class="shape s2"></span>
+      <span class="shape s3"></span>
+    </div>
+    <div class="hero-content">
+      <div class="logo-badge">
+        <span class="logo-icon">🛡️</span>
+      </div>
+      <h1>Guardián del Hogar</h1>
+      <p class="hero-sub">Tu asistente de seguridad doméstica.<br>Revisa, aprende y protege lo que más importa.</p>
+      <a href="#checklist" class="cta-btn">Comenzar inspección</a>
+    </div>
+    <div class="scroll-hint">↓</div>
+  </header>
+
+  <!-- ═══════════════════════════════════════ PROGRESO GLOBAL ═══ -->
+  <section class="progress-section" id="progress-section">
+    <div class="container">
+      <div class="progress-card">
+        <div class="progress-info">
+          <span class="progress-label">Progreso de seguridad</span>
+          <span class="progress-count"><span id="checked-count">0</span> / <span id="total-count">0</span> puntos verificados</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="progress-status" id="progress-status">⏳ Aún sin evaluar</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CHECKLIST ═══════ -->
+  <main class="checklist-main" id="checklist">
+    <div class="container">
+
+      <!-- ── Sección 1: Incendios ─────────────────────────────── -->
+      <article class="section-card" data-section="incendios">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#FF6B6B">
+              <img src="images/extintor.jpg" alt="Extintor" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">🔥</span>
+            </div>
+            <div>
+              <h2>Prevención de Incendios</h2>
+              <p class="section-desc">Detectores, extintores y hábitos clave</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-incendios">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="Coloca detectores en cada piso y a menos de 3 m de dormitorios. Pruébalos mensualmente.">
+              <label><input type="checkbox" /> Detectores de humo funcionando en cada piso y cerca de dormitorios</label>
+            </li>
+            <li data-tip="Un extintor tipo ABC cubre fuegos sólidos, líquidos y eléctricos. Revisa la aguja del manómetro mensualmente.">
+              <label><input type="checkbox" /> Extintor tipo ABC disponible y cargado (cocina / entrada)</label>
+            </li>
+            <li data-tip="Practica la ruta de salida con toda la familia al menos una vez al año. Define un punto de reunión exterior.">
+              <label><input type="checkbox" /> Plan de evacuación definido y practicado con la familia</label>
+            </li>
+            <li data-tip="Las velas encendidas deben estar sobre superficies estables e incombustibles, alejadas de cortinas y telas.">
+              <label><input type="checkbox" /> Velas y fósforos fuera del alcance de niños y materiales inflamables</label>
+            </li>
+            <li data-tip="Los calefactores portátiles necesitan al menos 1 metro de distancia libre. No seques ropa encima de ellos.">
+              <label><input type="checkbox" /> Calefactores portátiles a mínimo 1 m de muebles y ropa</label>
+            </li>
+            <li data-tip="Limpia los filtros de la campana extractora cada 2-3 meses. La grasa acumulada es altamente inflamable.">
+              <label><input type="checkbox" /> Filtros de campana extractora limpios de grasa</label>
+            </li>
+            <li data-tip="No se deben guardar periódicos viejos, pinturas o ropa acumulada que puedan alimentar un incendio.">
+              <label><input type="checkbox" /> Sin acumulación de materiales combustibles (papel, ropa, pinturas)</label>
+            </li>
+            <li data-tip="Nunca dejes comida cocinando sin supervisión: es la causa número 1 de incendios en cocinas.">
+              <label><input type="checkbox" /> Cocina siempre supervisada cuando hay fuego encendido</label>
+            </li>
+            <li data-tip="Anota el número de bomberos locales en un lugar visible y guárdalo en tu teléfono.">
+              <label><input type="checkbox" /> Número de bomberos visible y guardado en el teléfono</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ── Sección 2: Gas ──────────────────────────────────── -->
+      <article class="section-card" data-section="gas">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#FFB347">
+              <img src="images/gas.jpg" alt="Gas" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">💨</span>
+            </div>
+            <div>
+              <h2>Seguridad con el Gas</h2>
+              <p class="section-desc">Fugas, llaves de paso y ventilación</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-gas">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="Cierra siempre la llave de paso principal al acostarte o salir de casa. Es el hábito más importante.">
+              <label><input type="checkbox" /> Llave de paso del gas cerrada al salir o acostarse</label>
+            </li>
+            <li data-tip="Si hueles a gas: NO enciendas luces ni cerillas, abre puertas y ventanas, cierra la llave y llama a la empresa distribuidora.">
+              <label><input type="checkbox" /> Toda la familia sabe qué hacer ante una fuga de gas</label>
+            </li>
+            <li data-tip="Los tubos flexibles deben cambiarse cada 5 años o antes si presentan grietas, dureza o deformaciones.">
+              <label><input type="checkbox" /> Tubo flexible de conexión en buen estado (sin grietas ni dureza)</label>
+            </li>
+            <li data-tip="Los detectores de gas deben instalarse cerca del suelo para el butano (más pesado que el aire) o en la parte alta para el gas natural.">
+              <label><input type="checkbox" /> Detector de monóxido de carbono / fugas de gas instalado</label>
+            </li>
+            <li data-tip="La cocina debe tener ventilación permanente. No bloquees rejillas con muebles o cajas.">
+              <label><input type="checkbox" /> Cocina con ventilación adecuada (rejillas libres)</label>
+            </li>
+            <li data-tip="Los calentadores de gas NO deben instalarse en cuartos de baño ni habitaciones sin ventilación exterior.">
+              <label><input type="checkbox" /> Calentadores de gas fuera de baños y habitaciones cerradas</label>
+            </li>
+            <li data-tip="Las botellas de gas de reserva deben guardarse en posición vertical, en lugar ventilado (balcón, exterior), nunca en sótanos.">
+              <label><input type="checkbox" /> Botella de gas de reserva almacenada en vertical y lugar ventilado</label>
+            </li>
+            <li data-tip="Programa una revisión de tu instalación de gas con un técnico autorizado cada 4-5 años.">
+              <label><input type="checkbox" /> Instalación de gas revisada por técnico autorizado (cada 4-5 años)</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ── Sección 3: Electricidad ─────────────────────────── -->
+      <article class="section-card" data-section="electricidad">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#FFD93D">
+              <img src="images/cable_pelado.jpg" alt="Cable eléctrico" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">⚡</span>
+            </div>
+            <div>
+              <h2>Riesgos Eléctricos</h2>
+              <p class="section-desc">Cables, enchufes y cortocircuitos</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-electricidad">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="Un cable pelado o deshilachado puede provocar electrocución e incendio. Cámbialo o cúbrelo con cinta aislante de calidad.">
+              <label><input type="checkbox" /> Cables sin daños, deshilachados ni pelados (revisar toda la casa)</label>
+            </li>
+            <li data-tip="Los enchufes con grietas o calientes al tacto indican un problema en la instalación. Llama a un electricista autorizado.">
+              <label><input type="checkbox" /> Tomas de corriente sin grietas y frías al tacto</label>
+            </li>
+            <li data-tip="El uso excesivo de ladrones sobrecarga el circuito. Suma la potencia total de aparatos antes de comprar un regleta.">
+              <label><input type="checkbox" /> Sin sobrecarga de adaptadores 'ladrones' (regletas) en un mismo punto</label>
+            </li>
+            <li data-tip="Los cables bajo alfombras se deterioran por el roce continuo y pueden provocar incendios sin que se vean.">
+              <label><input type="checkbox" /> Cables visibles, no ocultos bajo alfombras ni muebles pesados</label>
+            </li>
+            <li data-tip="Aparatos como secadores, afeitadoras o radios deben mantenerse alejados de lavabos, bañeras y fregaderos.">
+              <label><input type="checkbox" /> Aparatos eléctricos pequeños lejos de lavabos y bañeras</label>
+            </li>
+            <li data-tip="El diferencial de 30mA protege de electrocuciones. Prúébalo pulsando el botón 'TEST' del cuadro eléctrico una vez al año.">
+              <label><input type="checkbox" /> Interruptor diferencial (30 mA) probado en el cuadro eléctrico</label>
+            </li>
+            <li data-tip="Tapas de seguridad en enchufes no utilizados evitan que niños introduzcan objetos metálicos.">
+              <label><input type="checkbox" /> Tapas de seguridad en enchufes no usados (si hay niños o mascotas)</label>
+            </li>
+            <li data-tip="Nunca manipules la instalación eléctrica con manos mojadas, descalzo o sobre suelo húmedo.">
+              <label><input type="checkbox" /> Manos secas y calzado al manipular cualquier aparato eléctrico</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ── Sección 4: Cocina ───────────────────────────────── -->
+      <article class="section-card" data-section="cocina">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#6BCB77">
+              <img src="images/cocina.jpg" alt="Cocina segura" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">🍳</span>
+            </div>
+            <div>
+              <h2>Cocina Segura</h2>
+              <p class="section-desc">Quemaduras, cortes y manipulación</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-cocina">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="Los mangos hacia el interior evitan que se enganchen accidentalmente o que los niños los alcancen y los vuelquen.">
+              <label><input type="checkbox" /> Mangos de sartenes y ollas girados hacia el interior de la estufa</label>
+            </li>
+            <li data-tip="Usa los fogones traseros siempre que puedas: reducen el alcance de los niños y el riesgo de volcar recipientes.">
+              <label><input type="checkbox" /> Uso preferente de fogones traseros cuando hay niños en casa</label>
+            </li>
+            <li data-tip="No mezcles lejía con amoníaco (produce gas tóxico), ni lejía con vinagre, ni limpiacristales con desengrasante.">
+              <label><input type="checkbox" /> Productos de limpieza separados de alimentos y sin mezclas peligrosas</label>
+            </li>
+            <li data-tip="Cuchillos y tijeras deben guardarse en cajones con seguro o bloques porta-cuchillos fuera del alcance de los niños.">
+              <label><input type="checkbox" /> Objetos cortantes (cuchillos, tijeras) guardados bajo seguro</label>
+            </li>
+            <li data-tip="Usa guantes de horno o manoplas aislantes. El aceite hirviendo puede causar quemaduras de tercer grado en segundos.">
+              <label><input type="checkbox" /> Guantes o manoplas de cocina disponibles y en buen estado</label>
+            </li>
+            <li data-tip="Limpiar la campana cada 2-3 meses y el horno mensualmente evita acumulación de grasa que puede inflamarse.">
+              <label><input type="checkbox" /> Campana y horno limpios de grasa acumulada</label>
+            </li>
+            <li data-tip="Los utensilios de plástico o madera cerca del fuego pueden derretirse o arder. Mantenlos alejados de la llama.">
+              <label><input type="checkbox" /> Utensilios de plástico/madera alejados de fuentes de calor directa</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ── Sección 5: Químicos ─────────────────────────────── -->
+      <article class="section-card" data-section="quimicos">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#4D96FF">
+              <img src="images/quimicos.jpg" alt="Productos químicos" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">🧪</span>
+            </div>
+            <div>
+              <h2>Productos Químicos</h2>
+              <p class="section-desc">Almacenamiento, mezclas y etiquetado</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-quimicos">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="NUNCA mezcles: lejía + amoníaco → gas cloro tóxico | lejía + vinagre → vapores nocivos | agua oxigenada + vinagre → peróxido corrosivo.">
+              <label><input type="checkbox" /> Ninguna mezcla peligrosa de productos de limpieza (lejía, amoníaco, etc.)</label>
+            </li>
+            <li data-tip="Los envases originales tienen instrucciones y números de emergencia. Trasvasar a botellas de agua o refresco puede causar intoxicaciones accidentales.">
+              <label><input type="checkbox" /> Productos en sus envases originales con etiquetas intactas</label>
+            </li>
+            <li data-tip="Los armarios de limpieza deben tener cierre con pestillo o llave si hay niños menores de 8 años en casa.">
+              <label><input type="checkbox" /> Productos de limpieza almacenados bajo llave o en alto, lejos de niños</label>
+            </li>
+            <li data-tip="Insecticidas, herbicidas y fertilizantes deben guardarse en lugar ventilado, separados de la cocina y de alimentos.">
+              <label><input type="checkbox" /> Insecticidas y productos de jardinería separados de alimentos</label>
+            </li>
+            <li data-tip="Pinturas, disolventes y barnices son inflamables. Guárdalos lejos de fuentes de calor y en lugares ventilados.">
+              <label><input type="checkbox" /> Pinturas, disolventes y barnices en lugar ventilado y alejado del calor</label>
+            </li>
+            <li data-tip="Revisa la fecha de caducidad del botiquín cada 6 meses. Los medicamentos caducados pueden ser ineficaces o tóxicos.">
+              <label><input type="checkbox" /> Botiquín revisado: sin medicamentos caducados, cerrado con llave</label>
+            </li>
+            <li data-tip="Usa guantes de nitrilo o látex al manipular lejías, desengrasantes y productos con símbolo de corrosivo o irritante.">
+              <label><input type="checkbox" /> Guantes de protección al manipular productos corrosivos o irritantes</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ── Sección 6: Baño y zonas húmedas ───────────────────── -->
+      <article class="section-card" data-section="bano">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#56CFE1">
+              <img src="images/bano.jpg" alt="Baño seguro" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">🚿</span>
+            </div>
+            <div>
+              <h2>Baño y Zonas Húmedas</h2>
+              <p class="section-desc">Resbalones, temperatura y electricidad</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-bano">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="Las alfombrillas antideslizantes reducen caídas en un 70%. Deben tener ventosas en la base y cubrir toda la zona de salida de la ducha.">
+              <label><input type="checkbox" /> Alfombrillas antideslizantes dentro y fuera de la ducha/bañera</label>
+            </li>
+            <li data-tip="Ajusta el calentador a máximo 50°C. Por encima, el agua puede causar quemaduras en menos de 2 segundos en niños y ancianos.">
+              <label><input type="checkbox" /> Calentador de agua ajustado a máximo 50°C</label>
+            </li>
+            <li data-tip="Secadores, afeitadoras y demás aparatos eléctricos deben desconectarse cuando no se usen y mantenerse lejos del agua.">
+              <label><input type="checkbox" /> Aparatos eléctricos del baño desconectados al no usarse</label>
+            </li>
+            <li data-tip="Las estufas eléctricas de baño deben tener certificación IP de protección contra agua y no deben estar al alcance de la bañera.">
+              <label><input type="checkbox" /> Sin estufas eléctricas convencionales dentro del baño</label>
+            </li>
+            <li data-tip="Instalar barras de apoyo en ducha y bañera reduce caídas en adultos mayores. Son especialmente importantes si hay personas de 65+ años.">
+              <label><input type="checkbox" /> Barras de apoyo instaladas (especialmente si hay adultos mayores)</label>
+            </li>
+            <li data-tip="Nunca dejes a un niño menor de 6 años solo en la bañera, ni siquiera un momento. El ahogamiento ocurre en silencios de segundos.">
+              <label><input type="checkbox" /> Niños pequeños nunca solos en la bañera</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ── Sección 7: Caídas ───────────────────────────────── -->
+      <article class="section-card" data-section="caidas">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#C77DFF">
+              <img src="images/escalera.jpg" alt="Escalera segura" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">🪜</span>
+            </div>
+            <div>
+              <h2>Prevención de Caídas</h2>
+              <p class="section-desc">Escaleras, pasillos y suelos</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-caidas">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="Las escaleras deben tener iluminación automática o de sensor. La oscuridad es la causa principal de caídas nocturnas.">
+              <label><input type="checkbox" /> Escaleras y pasillos bien iluminados (sensor o luz automática nocturna)</label>
+            </li>
+            <li data-tip="Zapatos, mochilas, cables y juguetes en el suelo son trampas de caída. Establece hábitos de orden, especialmente en zonas de paso.">
+              <label><input type="checkbox" /> Suelos libres de objetos (zapatos, juguetes, cables) en zonas de paso</label>
+            </li>
+            <li data-tip="Las alfombras sin base antideslizante o con bordes levantados son causa frecuente de tropiezos. Fíjalas con cinta adhesiva o velcro.">
+              <label><input type="checkbox" /> Alfombras con base antideslizante o fijadas al suelo sin bordes sueltos</label>
+            </li>
+            <li data-tip="La barandilla debe resistir al menos 50 kg de empuje lateral. Si balancea o hace ruido al apoyarte, necesita reparación.">
+              <label><input type="checkbox" /> Barandillas firmes y seguras en todas las escaleras</label>
+            </li>
+            <li data-tip="Las estanterías altas con libros o electrodomésticos deben anclarse a la pared con tornillos de tacos adecuados para el tipo de pared.">
+              <label><input type="checkbox" /> Estanterías y muebles altos anclados a la pared</label>
+            </li>
+            <li data-tip="Los balcones con niños o mascotas deben tener barandillas de al menos 110 cm de altura y barrotes verticales con menos de 10 cm de separación.">
+              <label><input type="checkbox" /> Balcones con barandillas seguras (≥110 cm, barrotes verticales estrechos)</label>
+            </li>
+            <li data-tip="Las ventanas bajas (menos de 90 cm del suelo) deben tener protección (reja, limitador) si hay niños en casa.">
+              <label><input type="checkbox" /> Ventanas bajas con protección si hay niños o mascotas</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ── Sección 8: Niños y mascotas ────────────────────────── -->
+      <article class="section-card" data-section="ninos">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#FF9F9F">
+              <img src="images/ninos_seguridad.jpg" alt="Seguridad infantil" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">👶</span>
+            </div>
+            <div>
+              <h2>Niños y Mascotas</h2>
+              <p class="section-desc">Asfixia, golpes y protecciones especiales</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-ninos">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="Los objetos menores de 4 cm de diámetro (botones, monedas, pilas de botón, canicas) son riesgo de asfixia para menores de 3 años.">
+              <label><input type="checkbox" /> Objetos pequeños (monedas, botones, pilas) fuera del alcance de bebés</label>
+            </li>
+            <li data-tip="Los cordones de persianas y cortinas deben enrollarse y colgarse a más de 1.5 m del suelo. Han causado estrangulamiento infantil.">
+              <label><input type="checkbox" /> Cordones de cortinas y persianas enrollados y fuera de alcance</label>
+            </li>
+            <li data-tip="Los protectores de esquinas de espuma o silicona en mesas y muebles evitan traumatismos craneoencefálicos en caídas de niños pequeños.">
+              <label><input type="checkbox" /> Protectores en esquinas y bordes afilados de muebles</label>
+            </li>
+            <li data-tip="Las puertas de seguridad para escaleras deben instalarse arriba Y abajo. Las de presión sólo son seguras en la parte baja.">
+              <label><input type="checkbox" /> Puertas de seguridad en escaleras (si hay bebés o niños pequeños)</label>
+            </li>
+            <li data-tip="Las bolsas de plástico y film transparente pueden causar asfixia. Deben guardarse inmediatamente después de usarse.">
+              <label><input type="checkbox" /> Bolsas de plástico guardadas inmediatamente, fuera del alcance</label>
+            </li>
+            <li data-tip="Los animales domésticos necesitan identificación (chip/collar) y vacunación al día. Nunca dejes a mascotas en balcones sin red de protección.">
+              <label><input type="checkbox" /> Balcones y terrazas con red o protección para mascotas</label>
+            </li>
+            <li data-tip="Las piscinas privadas deben tener valla perimetral de al menos 120 cm con cierre automático hacia el agua.">
+              <label><input type="checkbox" /> Piscinas con valla perimetral y cierre automático (si aplica)</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ── Sección 9: Cerrar y asegurar ──────────────────────── -->
+      <article class="section-card" data-section="rutina">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-header-left">
+            <div class="section-icon-wrap" style="--clr:#52B788">
+              <img src="images/rutina_noche.jpg" alt="Rutina nocturna" class="section-icon-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="section-icon-fallback" style="display:none">🌙</span>
+            </div>
+            <div>
+              <h2>Rutina Antes de Salir / Dormir</h2>
+              <p class="section-desc">La lista de comprobación diaria</p>
+            </div>
+          </div>
+          <div class="section-meta">
+            <span class="section-progress" id="prog-rutina">0/0</span>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="checklist">
+            <li data-tip="La estufa/cocina es la causa más frecuente de incendios domésticos. Verifica todos los mandos en posición 0 antes de salir.">
+              <label><input type="checkbox" /> Estufa / cocina completamente apagada (todos los mandos en 0)</label>
+            </li>
+            <li data-tip="El gas siempre cerrado al salir. Si tienes cocina de gas, también cierra la llave de la botella o la llave de paso principal.">
+              <label><input type="checkbox" /> Llave del gas cerrada</label>
+            </li>
+            <li data-tip="El grifo mal cerrado puede inundar la vivienda en pocas horas. Revisa fregadero, lavabo y bañera.">
+              <label><input type="checkbox" /> Todos los grifos bien cerrados</label>
+            </li>
+            <li data-tip="Las ventanas abiertas durante la noche o al salir permiten entrada de lluvia, insectos e intrusos. Ciérralas siempre.">
+              <label><input type="checkbox" /> Ventanas cerradas antes de salir o al dormir</label>
+            </li>
+            <li data-tip="Desconecta cargadores, cafeteras, tostadoras y lámparas cuando no las uses. Un aparato en stand-by puede suponer riesgo eléctrico prolongado.">
+              <label><input type="checkbox" /> Aparatos eléctricos no esenciales desconectados (cargadores, tostadora...)</label>
+            </li>
+            <li data-tip="Desconectar la plancha es de las verificaciones más importantes: es causa frecuente de incendios por olvido.">
+              <label><input type="checkbox" /> Plancha desconectada y guardada</label>
+            </li>
+            <li data-tip="Las velas deben estar completamente apagadas. Una vela olvidada puede provocar un incendio incluso horas después.">
+              <label><input type="checkbox" /> Velas completamente apagadas (no solo sin llama visible)</label>
+            </li>
+            <li data-tip="Asegura que puertas y ventanas estén cerradas y con seguro. La seguridad física también forma parte de la seguridad del hogar.">
+              <label><input type="checkbox" /> Puertas de entrada cerradas con llave</label>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ═══════════════════════════════════ PANEL DE RESULTADO ═══ -->
+  <section class="result-section" id="result-section" style="display:none">
+    <div class="container">
+      <div class="result-card" id="result-card">
+        <div class="result-icon" id="result-icon">🏠</div>
+        <h2 id="result-title">Evaluación completa</h2>
+        <p id="result-text">Texto del resultado</p>
+        <button class="cta-btn" onclick="resetAll()">Reiniciar checklist</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ CHATBOT ════════ -->
+  <div class="chatbot-bubble" id="chatbot-bubble" onclick="toggleChat()">
+    <span class="bubble-icon">🛡️</span>
+    <span class="bubble-badge" id="bubble-badge" style="display:none">1</span>
+  </div>
+
+  <div class="chatbot-panel" id="chatbot-panel">
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <span class="chat-avatar">🛡️</span>
+        <div>
+          <strong>Guardián</strong>
+          <small>Asesor de seguridad del hogar</small>
+        </div>
+      </div>
+      <div class="chat-header-right">
+        <button class="voice-toggle" id="voice-toggle" onclick="toggleVoice()" title="Activar/desactivar lectura en voz alta">
+          🔊
+        </button>
+        <button class="chat-close" onclick="toggleChat()">✕</button>
+      </div>
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+      <!-- Los mensajes se generan en JS -->
+    </div>
+
+    <div class="chat-suggestions" id="chat-suggestions">
+      <button onclick="askGuardian('¿Qué productos de limpieza no debo mezclar?')">⚠️ Mezclas peligrosas</button>
+      <button onclick="askGuardian('¿Cómo actúo si huelo a gas?')">💨 Fuga de gas</button>
+      <button onclick="askGuardian('¿Cómo uso un extintor?')">🔥 Usar extintor</button>
+      <button onclick="askGuardian('¿Qué hago si hay un incendio en mi casa?')">🚨 Incendio en casa</button>
+      <button onclick="askGuardian('¿Cómo protejo mi hogar si tengo niños pequeños?')">👶 Seguridad infantil</button>
+      <button onclick="askGuardian('¿Qué medicamentos no debo tener sin receta en casa?')">💊 Medicamentos</button>
+    </div>
+
+    <div class="chat-input-wrap">
+      <input type="text" id="chat-input" placeholder="Escribe tu pregunta a Guardián..." onkeydown="handleChatKey(event)" />
+      <button class="send-btn" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <script src="js/knowledge.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/checklist.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
