@@ -21,14 +21,12 @@ function toggleChat() {
     badge.style.display = 'none';
     if (!hasOpenedBefore) {
       hasOpenedBefore = true;
-      // Mensaje de bienvenida con delay
       setTimeout(() => {
         addBotMessage(`¡Hola! Soy <strong>Guardián</strong>, tu asesor de seguridad del hogar.<br>
 Puedo resolverte dudas sobre incendios, gas, electricidad, mezclas peligrosas, seguridad para niños y mucho más.<br><br>
 ¿En qué puedo ayudarte hoy?`, true);
       }, 300);
     }
-    // Scroll al fondo
     setTimeout(scrollToBottom, 400);
   } else {
     panel.classList.remove('open');
@@ -50,7 +48,6 @@ function handleChatKey(e) {
 }
 
 function askGuardian(question) {
-  // Si el panel está cerrado, ábrelo
   if (!chatOpen) {
     toggleChat();
     setTimeout(() => processUserMessage(question), 600);
@@ -62,7 +59,6 @@ function askGuardian(question) {
 function processUserMessage(text) {
   addUserMessage(text);
   showTyping();
-  // Simula tiempo de "pensamiento"
   setTimeout(() => {
     removeTyping();
     const answer = findAnswer(text);
@@ -141,7 +137,6 @@ function speakText(text) {
   if (!synth || !voiceEnabled) return;
   stopVoice();
 
-  // Cortar si es muy largo
   const maxLen = 400;
   const safeText = text.length > maxLen ? text.substring(0, maxLen) + '...' : text;
 
@@ -151,7 +146,6 @@ function speakText(text) {
   currentUtterance.pitch = 1.0;
   currentUtterance.volume = 1;
 
-  // Intenta seleccionar voz en español
   const voices = synth.getVoices();
   const spanishVoice = voices.find(v => v.lang.startsWith('es'));
   if (spanishVoice) currentUtterance.voice = spanishVoice;
@@ -183,13 +177,24 @@ function escapeHtml(text) {
     .replace(/>/g, '&gt;');
 }
 
+// ── stripHtml: elimina tags HTML Y emojis antes de leer en voz ──
 function stripHtml(html) {
   const tmp = document.createElement('div');
   tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || '';
+  let t = tmp.textContent || tmp.innerText || '';
+  // Eliminar emojis y símbolos especiales
+  t = t.replace(/[\u{1F000}-\u{1FFFF}]/gu, '')
+       .replace(/[\u{2600}-\u{27BF}]/gu, '')
+       .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+       .replace(/[\u{FE00}-\u{FE0F}]/gu, '')
+       .replace(/[\u{1F900}-\u{1F9FF}]/gu, '')
+       .replace(/[\u{2700}-\u{27BF}]/gu, '')
+       .replace(/[⚠️✅🔴🟡🟢❌✓→←↓↑]/g, '')
+       .replace(/\s+/g, ' ');
+  return t.trim();
 }
 
-// Mostrar badge en la burbuja si el chat no está abierto
+// ── Notificación burbuja ──────────────────────────────────────
 function notifyBubble() {
   if (!chatOpen) {
     const badge = document.getElementById('bubble-badge');
@@ -197,7 +202,6 @@ function notifyBubble() {
   }
 }
 
-// Mostrar notificación después de un rato
 setTimeout(() => {
   if (!hasOpenedBefore) notifyBubble();
 }, 8000);
