@@ -50,7 +50,7 @@ const GUARDIAN_KNOWLEDGE = [
     keywords: ['incendio', 'fuego', 'llamas', 'humo', 'evacua', 'quema', 'arde'],
     response: `🚨 <strong>Incendio en casa – protocolo de emergencia:</strong><br><br>
 1️⃣ <strong>Avisa</strong> a todos en la casa inmediatamente<br>
-2️⃣ <strong>Llama al 112</strong> (hazlo desde fuera si puedes)<br>
+2️⃣ <strong>Llama al 123</strong> (hazlo desde fuera si puedes)<br>
 3️⃣ <strong>No abras</strong> puertas calientes al tacto (hay fuego al otro lado)<br>
 4️⃣ Ve <strong>agachado</strong>: el humo sube, el aire limpio está abajo<br>
 5️⃣ Tapa tu boca/nariz con un <strong>trapo húmedo</strong><br>
