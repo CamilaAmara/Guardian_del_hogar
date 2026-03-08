@@ -7,12 +7,12 @@ const GUARDIAN_KNOWLEDGE = [
 
   // ──────────────────────────── MEZCLAS PELIGROSAS ────────────
   {
-    keywords: ['mezcl', 'juntar', 'combinar', 'lejia', 'lejía', 'amoniaco', 'amoníaco', 'vinagre', 'quimicos', 'químicos', 'limpieza', 'productos'],
+    keywords: ['mezcl', 'juntar', 'combinar', 'cloro', 'cloro', 'amoniaco', 'amoníaco', 'vinagre', 'quimicos', 'químicos', 'limpieza', 'productos'],
     response: `⚠️ <strong>Mezclas de limpieza NUNCA hacer:</strong><br><br>
-🔴 <strong>Lejía + Amoníaco</strong> → Gas cloro (tóxico para pulmones)<br>
-🔴 <strong>Lejía + Vinagre</strong> → Vapores de cloro irritantes<br>
-🔴 <strong>Lejía + Agua oxigenada</strong> → Reacción violenta con gas tóxico<br>
-🔴 <strong>Lejía + Limpiacristales</strong> → La mayoría contienen amoníaco<br>
+🔴 <strong>cloro + Amoníaco</strong> → Gas cloro (tóxico para pulmones)<br>
+🔴 <strong>cloro + Vinagre</strong> → Vapores de cloro irritantes<br>
+🔴 <strong>cloro + Agua oxigenada</strong> → Reacción violenta con gas tóxico<br>
+🔴 <strong>cloro + Limpiacristales</strong> → La mayoría contienen amoníaco<br>
 🔴 <strong>Salfumán + cualquier cosa</strong> → Vapores ácidos muy peligrosos<br>
 🔴 <strong>Desengrasante + Lavavajillas</strong> → Espuma tóxica, irritación piel<br><br>
 ✅ <strong>Regla de oro:</strong> Nunca mezcles productos de limpieza. Usa uno a la vez y ventila bien.`
