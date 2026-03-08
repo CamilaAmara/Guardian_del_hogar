@@ -8,13 +8,13 @@ const GUARDIAN_KNOWLEDGE = [
   // ──────────────────────────── MEZCLAS PELIGROSAS ────────────
   {
     keywords: ['mezcl', 'juntar', 'combinar', 'cloro', 'cloro', 'amoniaco', 'amoníaco', 'vinagre', 'quimicos', 'químicos', 'limpieza', 'productos'],
-    response: `⚠️ <strong>Mezclas de limpieza NUNCA hacer:</strong><br><br>
-🔴 <strong>cloro + Amoníaco</strong> → Gas cloro (tóxico para pulmones)<br>
-🔴 <strong>cloro + Vinagre</strong> → Vapores de cloro irritantes<br>
-🔴 <strong>cloro + Agua oxigenada</strong> → Reacción violenta con gas tóxico<br>
-🔴 <strong>cloro + Limpiacristales</strong> → La mayoría contienen amoníaco<br>
-🔴 <strong>Salfumán + cualquier cosa</strong> → Vapores ácidos muy peligrosos<br>
-🔴 <strong>Desengrasante + Lavavajillas</strong> → Espuma tóxica, irritación piel<br><br>
+    response: `⚠️ <strong>Mezclas de limpieza que NUNCA debes hacer:</strong><br><br>
+🔴 <strong>Cloro + Amoníaco</strong> → Gas de cloro (tóxico para pulmones).<br>
+🔴 <strong>Cloro + Vinagre</strong> → Vapores de cloro irritantes.<br>
+🔴 <strong>Cloro + Agua oxigenada</strong> → Reacción violenta con gas tóxico.<br>
+🔴 <strong>Cloro + Limpiacristales</strong> → La mayoría contienen amoníaco.<br>
+🔴 <strong>Salfumán + cualquier cosa</strong> → Vapores ácidos muy peligrosos.<br>
+🔴 <strong>Desengrasante + Lavavajillas</strong> → Espuma tóxica, irritación piel.<br><br>
 ✅ <strong>Regla de oro:</strong> Nunca mezcles productos de limpieza. Usa uno a la vez y ventila bien.`
   },
 
@@ -22,12 +22,12 @@ const GUARDIAN_KNOWLEDGE = [
   {
     keywords: ['gas', 'fuga', 'huele', 'olor', 'escape', 'butano', 'propano', 'natural'],
     response: `💨 <strong>Si hueles a gas, actúa así:</strong><br><br>
-1️⃣ <strong>NO encendas</strong> luces ni interruptores eléctricos<br>
-2️⃣ <strong>NO uses</strong> cerillas, encendedores ni móvil dentro del espacio<br>
-3️⃣ <strong>Abre</strong> todas las ventanas y puertas de golpe<br>
-4️⃣ <strong>Cierra</strong> la llave de paso del gas (debajo de la cocina o en la pared)<br>
-5️⃣ <strong>Sal</strong> de la vivienda inmediatamente<br>
-6️⃣ Desde fuera, llama a tu empresa de gas o <strong>emergencias: 112</strong><br><br>
+1️⃣ <strong>NO encendas</strong> luces ni interruptores eléctricos.<br>
+2️⃣ <strong>NO uses</strong> cerillas, encendedores ni móvil dentro del espacio.<br>
+3️⃣ <strong>Abre</strong> todas las ventanas y puertas de golpe.<br>
+4️⃣ <strong>Cierra</strong> la llave de paso del gas (debajo de la cocina o en la pared).<br>
+5️⃣ <strong>Sal</strong> de la vivienda inmediatamente.<br>
+6️⃣ Desde fuera, llama a tu empresa de gas o <strong>emergencias: 123</strong><br><br>
 ⛔ <strong>NUNCA</strong> uses agua para apagar fuego de gas: puede hacer explotar la botella.`
   },
 
@@ -35,14 +35,14 @@ const GUARDIAN_KNOWLEDGE = [
   {
     keywords: ['extintor', 'extinguir', 'usar extintor', 'apagar fuego', 'incendio pequeño'],
     response: `🔥 <strong>Cómo usar un extintor (método PASE):</strong><br><br>
-<strong>P</strong> – Quita el <strong>Pasador</strong> (precinto) tirando del anillo<br>
-<strong>A</strong> – <strong>Apunta</strong> la boquilla a la BASE de las llamas (no al humo)<br>
-<strong>S</strong> – <strong>Squash</strong> (aprieta) la palanca superior con firmeza<br>
-<strong>E</strong> – <strong>Escanea</strong> moviendo la boquilla de lado a lado<br><br>
-📏 Mantente a <strong>2-3 metros</strong> del fuego<br>
-🚪 Colócate siempre <strong>entre el fuego y la salida</strong><br>
-⏱️ Un extintor de 1 kg dura solo <strong>8-12 segundos</strong><br>
-🔔 Tipo ABC: sirve para sólidos, líquidos inflamables y fuegos eléctricos`
+<strong>P</strong> – Quita el <strong>Pasador</strong> (precinto) tirando del anillo.<br>
+<strong>A</strong> – <strong>Apunta</strong> la boquilla a la BASE de las llamas (no al humo.)<br>
+<strong>S</strong> – <strong>Squash</strong> (aprieta) la palanca superior con firmeza.<br>
+<strong>E</strong> – <strong>Escanea</strong> moviendo la boquilla de lado a lado.<br><br>
+📏 Mantente a <strong>2-3 metros</strong> del fuego.<br>
+🚪 Colócate siempre <strong>entre el fuego y la salida.</strong><br>
+⏱️ Un extintor de 1 kg dura solo <strong>8-12 segundo.s</strong><br>
+🔔 Tipo ABC: sirve para sólidos, líquidos inflamables y fuegos eléctricos.`
   },
 
   // ──────────────────────────── INCENDIO EN CASA ──────────────
